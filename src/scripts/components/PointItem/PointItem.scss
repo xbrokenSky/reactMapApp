@@ -1,0 +1,20 @@
+.point-item {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    &:not(:first-child) {
+        margin-top: 5px;
+    }
+
+    &__point-txt {
+        word-break: break-word;
+    }
+
+    &__del-btn {
+        padding: 5px 10px;
+
+        word-break: keep-all;
+    }
+}
