@@ -30,12 +30,16 @@ export const PointsList = React.memo(({ pointData, removePoint, changePointsOrde
     };
     const points = pointData.map((item) => {
         const { id, point } = item;
+        const delPoint = () => {
+            removePoint(id);
+        };
+
         return (
             <DragPointItem
                 key={id}
                 pointId={id}
                 point={point}
-                removePoint={() => { removePoint(id); }}
+                removePoint={delPoint}
                 findItem={findItem}
                 moveItem={moveItem}
             />
